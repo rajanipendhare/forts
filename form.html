@@ -7,8 +7,8 @@
 <body>
 
 	<form>
-		<h4> Enter your Full name:
-		<input type="text" name="Fullname" id="myname" size="30" maxlength="20">
+		<!-- <h4> Enter your Full name: -->
+		<input type="text" name="Fullname" id="myname" size="30" maxlength="20" placeholder="Enter full name">
 		</h4>
 		
 		<h4> Enter mother's name:
@@ -18,7 +18,7 @@
 		<input type="text" name="address" id="myadd" rows="2" size="50" maxlength="50"></h4>
 
 		<h4> Enter your mobile number:
-		<input type="text" name="contact" id="mycon" maxlength="10"></h4>
+		<input type="number" name="contact" id="contact" max="10"></h4>
 		
 		<h4> Select your Gender :</h4>
 		<input type="radio" id="male" name="gender" value="male">
@@ -44,11 +44,37 @@
 		<script type="text/javascript"
 		src="https://www.snaphost.com/jquery/Calendar.aspx?dateFormat=dd/mm/yy"></script>
 		
+		<input type="button" name="submit" value="Submit" size="5" onclick="validation()">
 
-		<input type="button" name="submit" value="Submit" size="5">
-
-		<button onclick="document.getElementById('myname').value = ''"> Reset</button>
+		<button> Reset</button>
 
 	</form>
 </body>
 </html>
+
+<script type="text/javascript">
+	function validation() 
+	{
+		var myname = document.getElementById('myname').value
+		var mothername = document.getElementById('mothername').value
+		var myadd = document.getElementById('myadd').value
+
+		if (myname == '') {
+			alert("Full name field should not be empty.");
+		}  else {
+			if (mothername == '') {
+				alert("Mother name field should not be empty.");
+			} else {
+				if (myadd == '') {
+				alert("Address field should not be empty.");
+				}
+			}
+		}
+	}
+</script>
+		
+
+
+
+
+
