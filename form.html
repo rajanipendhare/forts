@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1> Information Form </h1>
+	<title> Information form</title>
+</head>
+<body>
+
+	<form>
+		<h4> Enter your Full name:
+		<input type="text" name="Fullname" id="myname" size="30" maxlength="20">
+		</h4>
+		
+		<h4> Enter mother's name:
+		<input type="text" name="mothername" id="mothername" size="15" maxlength="15"></h4>
+		
+		<h4>Enter your full address:
+		<input type="text" name="address" id="myadd" rows="2" size="50" maxlength="50"></h4>
+
+		<h4> Enter your mobile number:
+		<input type="text" name="contact" id="mycon" maxlength="10"></h4>
+		
+		<h4> Select your Gender :</h4>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label><br>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br>
+		<input type="radio" id="other" name="gender" value="other">
+		<label for="other">Other</label>
+		
+		<h4> Select Your Class :
+		 	<select id="class" name="classname">
+ 		 		<option value="1">first year</option>
+  				<option value="2">second year</option>
+  				<option value="3">third year</option>
+ 				 <option value="4">last year</option>
+			</select>
+			</h4><br>
+		
+		<h4> Enter your Aadhar number:
+		<input type="text" name="aadhar" id="myaadhar" maxlength="12"></h4>
+
+		<h4> Select Date: </h4>
+		<script type="text/javascript"
+		src="https://www.snaphost.com/jquery/Calendar.aspx?dateFormat=dd/mm/yy"></script>
+		
+
+		<input type="button" name="submit" value="Submit" size="5">
+
+		<button onclick="document.getElementById('myname').value = ''"> Reset</button>
+
+	</form>
+</body>
+</html>
