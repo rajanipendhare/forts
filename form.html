@@ -25,11 +25,11 @@
 		<label for="female">Female</label><br>
 
 		<h4> Select Your Class :
-		 	<select id="class" name="classname">
- 		 		<option value="1">first year</option>
-  				<option value="2">second year</option>
-  				<option value="3">third year</option>
- 				<option value="4">last year</option>
+		 	<select id="standard" name="classname">
+ 		 		<option value="first_year">first year</option>
+  				<option value="second_year">second year</option>
+  				<option value="third_year">third year</option>
+ 				<option value="fourth_year">last year</option>
 			</select>
 		</h4><br>
 
@@ -58,7 +58,8 @@
 	<div id="name"></div>
 	<div id="mother_name"></div>
 	<div id="address"></div>
-
+	<div id="show_std"></div>
+	
 </body>
 </html>
 
@@ -67,6 +68,7 @@
 		var myname = document.getElementById('myname').value
 		var mothername = document.getElementById('mothername').value
 		var myadd = document.getElementById('myadd').value
+		var standard = document.getElementById('standard').value
 
 		if (myname == '') {
 			alert("Full name field should not be empty.");
@@ -87,5 +89,6 @@
 		document.getElementById('name').innerHTML = myname;
 		document.getElementById('mother_name').innerHTML = mothername;
 		document.getElementById('address').innerHTML = myadd;
+		document.getElementById('show_std').innerHTML = standard;
 	}		
 </script>
