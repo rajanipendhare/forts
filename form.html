@@ -3,42 +3,69 @@
 <head>
 	<h1> Information Form </h1>
 	<title> Information form</title>
+
+<style>
+table {
+  font-family: verdana;
+  border-collapse: collapse;
+  float: right; 
+  width: 50%; height: 5%
+}
+td, th {
+  border: 2px solid grey; color: black;
+  text-align: center;
+  padding: 5px;
+}
+tr:nth-child(odd) 
+{
+  background-color: #ffeedd;
+}
+tr:nth-child(even) {
+  background-color: #eeffdd;
+}
+</style>
 </head>
 <body>
 
-	<form>
-		<!-- <h4> Enter your Full name: -->
-		<input type="text" name="Fullname" id="myname" size="30" maxlength="20" placeholder="Enter full name">
-		</h4>
-		
-		<h4> Enter mother's name:
-		<input type="text" name="mothername" id="mothername" size="15" maxlength="15"></h4>
-		
-		<h4>Enter your full address:
-		<input type="text" name="address" id="myadd" rows="2" size="50" maxlength="50"></h4>
+	<form id="info">
+		<input type="text" name="Fullname" id="myname" size="30" maxlength="20" placeholder="Enter full name"></h4><br>
 
-		<h4> Enter your mobile number:
-		<input type="number" name="contact" id="contact" max="10"></h4>
+		<input type="text" name="mothername" id="mothername" size="15" maxlength="15" placeholder="Enter mother's name:"></h4>
+		<br>
 		
+		<input type="text" name="address" id="myadd" rows="2" size="50" maxlength="50" placeholder="Enter your full address:"></h4>
+		<br>
+		
+		<input type="number" name="contact" id="contact" max="10" placeholder="Enter your mobile number:"></h4><br>
 		<h4> Select your Gender :</h4>
 		<input type="radio" id="male" name="gender" value="male">
-		<label for="male">Male</label><br>
+		<label for="male">Male</label>
 		<input type="radio" id="female" name="gender" value="female">
 		<label for="female">Female</label><br>
-		<input type="radio" id="other" name="gender" value="other">
-		<label for="other">Other</label>
-		
+
 		<h4> Select Your Class :
 		 	<select id="class" name="classname">
  		 		<option value="1">first year</option>
   				<option value="2">second year</option>
   				<option value="3">third year</option>
- 				 <option value="4">last year</option>
-			</select>
-			</h4><br>
-		
+ 				<option value="4">last year</option>
+			</select></h4><br>
+			<h4>Hobbies: </h4>
+				<input type="checkbox" id="hobby1" name="hobby1" value="playing">
+				<label for="hobby1"> Playing games  </label>
+				<input type="checkbox" id="hobby2" name="hobby2" value="reading">
+				<label for="hobby2"> Reading  </label>
+				<input type="checkbox" id="hobby3" name="hobby3" value="Singing">
+				<label for="hobby3"> Singing  </label><br>
+
+				<table id="list">
+					<th>Full name</th>
+					<th>Mothers name</th>
+					<th>Address</th>
+				</table>
+
 		<h4> Enter your Aadhar number:
-		<input type="text" name="aadhar" id="myaadhar" maxlength="12"></h4>
+		<input type="number" name="aadhar" id="myaadhar"></h4>
 
 		<h4> Select Date: </h4>
 		<script type="text/javascript"
@@ -46,7 +73,7 @@
 		
 		<input type="button" name="submit" value="Submit" size="5" onclick="validation()">
 
-		<button> Reset</button>
+		<button value="Add DATA" onclick="AddData()"> ADD DATA</button>
 
 	</form>
 </body>
@@ -70,9 +97,18 @@
 				}
 			}
 		}
-	}
-</script>
 		
+		var myaadhar_len = document.getElementById('myaadhar').value.length;
+		if ( myaadhar_len > 12 || myaadhar_len < 12)
+		{
+		alert("Aadhar should not be empty / length should be 12");
+
+		}		
+	}
+		
+
+  </script>
+
 
 
 
