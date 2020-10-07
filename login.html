@@ -1,0 +1,38 @@
+<h1> Sign Up Form </h1>
+<input type="text" name="user_name" placeholder="Enter Username" id="sign_user_name"><br><br>
+<input type="password" name="password" id="sign_password" placeholder="Enter Password"><br><br>
+<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"><br><br>
+<input type="button" name="sign_up" value="Sign Up" onclick="signup()">
+
+<h1> Login form </h1>
+<input type="text" name="login" placeholder="Enter Login" id="login_user_name"><br><br>
+<input type="password" name="password" id="login_password"><br>
+<input type="button" name="login" value="Login" onclick="login()">
+<script type="text/javascript">
+	function login() {
+		var user_name = document.getElementById('login_user_name').value
+		var password = document.getElementById('login_password').value
+		if (user_name== "testing" && password=="123456") {
+			alert("you are successfully login");
+		} else {
+			alert("Username and password are invalid");
+		}
+	}
+	function signup() {
+		var sign_user_name = document.getElementById('sign_user_name').value
+		var sign_password = document.getElementById('sign_password').value
+		var confirm_password = document.getElementById('confirm_password').value
+			if(sign_user_name == '' && sign_password == ''){
+				alert("All fields required");
+			}
+			if (sign_password != confirm_password){
+				alert("password and confirm password does not match");
+			}
+
+
+
+
+
+	} 
+</script>
+
