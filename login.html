@@ -4,17 +4,25 @@
 	<title>Login Form</title>
 </head>
 <body>
-<h1> Sign Up Form </h1>
-<form name="login_form">
-<input type="text" name="user_name" placeholder="Enter Username" id="sign_user_name"><br><br>
-<input type="password" name="password" id="sign_password" placeholder="Enter Password"><br><br>
-<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"><br><br>
-<input type="button" name="sign_up" value="sign_Up" onclick="signup()">
 
-<h1> Login form </h1>
-<input type="text" name="login" placeholder="Enter Login" id="login_user_name"><br><br>
-<input type="password" name="password" id="login_password"><br><br>
-<input type="button" name="login" value="login" onclick="login()">
+<input type="button" name="show" value="Sign_In" onclick="mylog()">
+<input type="button" name="show" value="Log_In" onclick="mysign()">
+
+</h2>
+<div id="mysign">
+	<h1> Sign Up Form </h1>
+	<form name="login_form">
+	<input type="text" name="user_name" placeholder="Enter Username" id="sign_user_name"><br><br>
+	<input type="password" name="password" id="sign_password" placeholder="Enter Password"><br><br>
+	<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"><br><br>
+	<input type="button" name="sign_up" value="sign_Up" onclick="signup()">
+</div>
+<div id="mylog">
+	<h1> Login form </h1>
+	<input type="text" name="login" placeholder="Enter Login" id="login_user_name"><br><br>
+	<input type="password" name="password" id="login_password"><br><br>
+	<input type="button" name="login" value="login" onclick="login()">
+</div>
 </form>
 </body>
 </html>
@@ -51,4 +59,20 @@
 			}
 		}
 	}
+function mysign(){
+	var x = document.getElementById("mysign");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function mylog(){
+	var y = document.getElementById("mylog");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
 </script>
